@@ -1,0 +1,20 @@
+<title>Programa que calcula idade!</title>
+<h1>Programa que calcula idade!</h1>
+
+<!-- Javascript dentro do HTML -->
+<script>
+  // Pega o ano atual automaticamente
+  const anoAtual = new Date().getFullYear();
+
+  // Solicita o ano de nascimento ao usuário
+  const anoNascimento = prompt('Que ano você nasceu?');
+
+  // Calcula a idade
+  const idade = anoAtual - parseInt(anoNascimento);
+
+  // Para exibir em alerta
+  // alert("Sua idade é: " + idade);
+
+  // Para escrever no documento
+  document.write("Sua idade é: " + idade);
+</script>

@@ -1,0 +1,25 @@
+<title>Programa que calcula idade!</title>
+<h1>Programa que calcula idade!</h1>
+
+<script>
+  // Solicita a data completa de nascimento
+  const nascimentoStr = prompt("Digite sua data de nascimento (AAAA-MM-DD):");
+
+  // Converte para objeto Date
+  const nascimento = new Date(nascimentoStr);
+  const hoje = new Date();
+
+  // Calcula idade base
+  let idade = hoje.getFullYear() - nascimento.getFullYear();
+
+  // Ajusta se ainda não fez aniversário este ano
+  const aniversarioEsteAno = new Date(hoje.getFullYear(), nascimento.getMonth(), nascimento.getDate());
+  if (hoje < aniversarioEsteAno) {
+    idade--;
+  }
+
+  // Exibe resultado
+  //alert("Sua idade é: " + idade);
+  document.write("Sua idade é: " + idade);
+</script>
+
