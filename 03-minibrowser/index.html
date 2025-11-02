@@ -1,0 +1,73 @@
+<!-- <main>
+    <header>
+        <div class="close-area"></div>
+        <input placeholder="https://..." value="https://mariosouto.com" />          
+    </header>
+    <iframe src="https://mariosouto.com"></iframe>
+</main> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Browser Experimental</title>
+</head>
+<body>
+    
+
+
+<script>
+    // var aba1Titulo = 'Titulo da aba 1';
+    // var aba1 = 'https://www.google.com/'
+    // var aba2Titulo = 'Titulo da aba 2';
+    // var aba2 = 'https://portal.pucrs.br/'
+    // var aba3 = 'https://mariosouto.com/'
+
+    // Objetos: Representa coisas com múltiplos atributos
+    var aba1 = {
+        titulo: 'Titulo da aba 1',
+        url: 'https://www.google.com/'
+    };
+    
+    var aba2 = {
+        titulo: 'Titulo da aba 2',
+        url: 'https://portal.pucrs.br/'
+    };
+
+    // [ENTRADA]
+    // Arrays: Listas de coisas
+    const abas = [
+        aba1,
+        aba2
+    ];
+
+    // [Processamento]
+    for(aba of abas) {
+        // alert(aba.titulo);
+        console.log(aba.titulo);
+        // [Output]
+        var valorAtualDoHTML = document.body.innerHTML;
+        document.body.innerHTML = valorAtualDoHTML + `<a href="${aba.url}">${aba.titulo}</a>`;
+    }
+
+
+
+ 
+
+    
+
+
+    // O que tem em uma aba do navegador
+    // [ ] título
+    // [x] url
+    // [ ] página de fato (html, css, javascript)
+
+
+</script>
+
+<link rel="stylesheet" href="style.css" />
+
+
+</body>
+</html>
